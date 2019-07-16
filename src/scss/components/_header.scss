@@ -1,0 +1,21 @@
+.header{
+   
+    &__logo{
+        grid-column-start: 1; 
+        grid-column-end: 4; 
+    }
+
+    &__number{
+        grid-column-start: 9; 
+        grid-column-end: 11;  
+    }
+    &__button{
+        grid-column-start: 11;  
+        grid-column-end: -1;  
+    }
+
+}
+.nav{
+    grid-column-start: 4; 
+    grid-column-end: 8; 
+}
