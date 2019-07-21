@@ -48,6 +48,22 @@ a{
     text-transform: uppercase;
     color: #3A4959;
 }
+.blue-button{
+    background: #056CDE;
+    border-radius: 10px;
+    width: 310px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
 
 .container{
     margin: 0 auto;
@@ -58,4 +74,35 @@ a{
     grid-gap: 20px;
     grid-column-start: 1;
     grid-column-end: -1;
+}
+
+.links{
+    width: 150px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+
+    @mixin links($x) {
+        width: 30px;
+        height: 30px;
+        background: url("./img/sprite.png");
+        background-position-y: -68px;
+        background-position-x: ($x*(-30)) + px;
+
+    }
+    &__p{
+        @include links(0);
+        margin-right: 10px;
+    }
+    &__insta{
+        @include links(1);
+        margin-right: 10px;
+    }
+    &__twiter{
+        @include links(2);
+        margin-right: 10px;
+    }
+    &__facebook{
+        @include links(3);
+    }
 }
